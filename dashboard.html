@@ -107,7 +107,7 @@ role=e.target.value;
 if(role==='citizen') page='overview';
 else if(role==='officer') page='reports';
 else if(role==='worker') page='tasks';
-toast(Demo role switched to ${role}. This is not secure authentication.);
+toast(`Demo role switched to ${role}. This is not secure authentication.`);
 render();
 });
 function binconst f=input.files?.[0];if(!f){cb('');return}if(!f.type.startsWith('image/')){toast('Choose an image file.');input.value='';cb('');return}if(f.size>900*1024){toast('Image is larger than 900 KB. Choose a smaller image so it can be stored in this browser.');input.value='';cb('');return}const reader=new FileReader();reader.onload=()=>cb(String(reader.result));reader.onerror=()=>toast('Could not read this image. Try another file.');reader.readAsDataURL(f)}
